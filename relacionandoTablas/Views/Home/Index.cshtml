@@ -2,19 +2,20 @@
     ViewBag.Title = "Home Page";
 }
 
-<h1>Bienvenido!</h1>
+<h1>Rehabilitar</h1>
 
 
 <div>
     <div class="container-33">
         <div>
-            <p>Turnos</p>
+            <p>@Html.ActionLink("Turnos", "Index", "Turnoes")</p>
+            
         </div>
         <div>
-            <p>Agenda</p>
+            <p>@Html.ActionLink("Agenda", "Index", "Turnoes")</p>
         </div>
         <div>
-            <p>Pacientes</p>
+            <p>@Html.ActionLink("Pacientes", "Index", "Pacientes")</p>
         </div>
     </div>
 </div>
