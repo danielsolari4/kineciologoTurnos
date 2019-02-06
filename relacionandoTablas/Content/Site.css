@@ -1,4 +1,10 @@
-﻿body {
+﻿
+a{
+    text-decoration: none !important;
+    color: inherit;
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: #e1e6e5;
