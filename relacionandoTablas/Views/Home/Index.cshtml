@@ -22,17 +22,40 @@
 
 <div id='calendar'></div>
 
+<input type="text" name="name" value="" />
+
+<h1 id="evento">evento2</h1>
+<p id="dia">2019-02-06</p>
+
+
 <script>
 
    
 
         $(function () {
 
+            var titulo = $("#evento").text();
+            var dia = $("#dia").text();
+
             // page is now ready, initialize the calendar...
 
             $('#calendar').fullCalendar({
                 height: 450,
-                defaultView: 'agendaWeek'
+                defaultView: 'agendaWeek',
+
+
+
+                  events: [
+                    {
+                        title: titulo,
+                        start: dia
+                    }
+                  
+                ]
+
+
+
+
                 
                 // put your options and callbacks here
             })
