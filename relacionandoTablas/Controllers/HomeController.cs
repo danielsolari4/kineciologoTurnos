@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace relacionandoTablas.Controllers
 {
     public class HomeController : Controller
-    {
+    { 
         
 
         public ActionResult Index()
