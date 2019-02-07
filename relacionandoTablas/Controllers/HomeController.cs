@@ -1,4 +1,5 @@
-﻿using relacionandoTablas.Models;
+﻿
+using relacionandoTablas.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +9,21 @@ using System.Web.Mvc;
 namespace relacionandoTablas.Controllers
 {
     public class HomeController : Controller
-    { 
+    {
         
+        public kineContext db = new kineContext();
 
         public ActionResult Index()
         {
+
+            var listaTurnos = db.Turnos.ToList();
+
+
             var a = new kineContext();
             a.Pacientes.ToList();
-            return View();
+
+            
+            return View(listaTurnos);
         }
 
         public ActionResult About()

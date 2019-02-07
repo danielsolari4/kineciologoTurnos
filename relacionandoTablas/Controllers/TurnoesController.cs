@@ -48,7 +48,7 @@ namespace relacionandoTablas.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Dia,PacienteID")] Turno turno)
+        public ActionResult Create([Bind(Include = "Id,Dia,Hora,PacienteID")] Turno turno)
         {
             if (ModelState.IsValid)
             {

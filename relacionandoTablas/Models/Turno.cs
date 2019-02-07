@@ -9,6 +9,7 @@ namespace relacionandoTablas.Models
     {
         public int Id { get; set; }
         public string Dia { get; set; }
+        public string Hora { get; set; }
         public virtual Paciente Paciente { get; set; }
         public int PacienteID { get; set; }
     }
