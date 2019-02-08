@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link rel='stylesheet' href='Content/fullcalendar.css' />
-    <script src='Scripts/lib/jquery.min.js'></script>
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel='stylesheet' href="@Url.Content("~/Content/fullcalendar.css")" />
+    <script src="@Url.Content("~/Scripts/lib/jquery.min.js")"></script>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" />
+    
+
     @Styles.Render("~/Content/css")
 
     @Scripts.Render("~/bundles/modernizr")
@@ -22,8 +24,9 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <a href="/home">
-                        <img src="Content/images/ancarola-web.png" alt="Alternate Text" />
+                    <a href="/Home">
+                        <img src="@Url.Content("~/Content/images/ancarola-web.png")" alt="Alternate Text" />
+
                     </a>
                 </div>
             </div>
@@ -44,14 +47,15 @@
         </footer>
     </div>
 
+    
     @Scripts.Render("~/bundles/jquery")
 
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
 
-    <script src='Scripts/lib/moment.min.js'></script>
-    <script src='Scripts/fullcalendar.js'></script>
-    
+    <script src="@Url.Content("~/Scripts/lib/moment.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/fullcalendar.js")"></script>
+
 </body>
 </html>
