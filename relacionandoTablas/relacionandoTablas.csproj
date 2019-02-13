@@ -135,6 +135,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PacientesController.cs" />
     <Compile Include="Controllers\TurnoesController.cs" />
+    <Compile Include="Filter4Niggas\ActionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -145,6 +146,10 @@
     <Compile Include="Migrations\201902071920566_dani.cs" />
     <Compile Include="Migrations\201902071920566_dani.Designer.cs">
       <DependentUpon>201902071920566_dani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902111329506_sesentaiuno.cs" />
+    <Compile Include="Migrations\201902111329506_sesentaiuno.Designer.cs">
+      <DependentUpon>201902111329506_sesentaiuno.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\kineContext.cs" />
@@ -330,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902071920566_dani.resx">
       <DependentUpon>201902071920566_dani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902111329506_sesentaiuno.resx">
+      <DependentUpon>201902111329506_sesentaiuno.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

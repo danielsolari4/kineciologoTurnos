@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using relacionandoTablas.Filter4Niggas;
+using System.Web;
 using System.Web.Mvc;
 
 namespace relacionandoTablas
@@ -8,6 +9,7 @@ namespace relacionandoTablas
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new ActionFilter());
         }
     }
 }

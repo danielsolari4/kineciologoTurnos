@@ -15,9 +15,11 @@ namespace relacionandoTablas.Controllers
         private kineContext db = new kineContext();
 
         // GET: Pacientes
-        public ActionResult Index()
+        public ActionResult Index(string logg)
         {
-            return View(db.Pacientes.ToList());
+
+            
+           return View(db.Pacientes.ToList());
         }
 
         // GET: Pacientes/Details/5
