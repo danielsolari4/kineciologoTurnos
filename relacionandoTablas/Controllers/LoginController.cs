@@ -57,11 +57,11 @@ namespace relacionandoTablas.Controllers
         {
             HttpCookie cookie = new HttpCookie("adid");
             cookie.Values["logueado"] = "false";
-            cookie.Expires = DateTime.Now.AddDays(1);
+            cookie.Expires = DateTime.Now.AddDays(-1);
 
             HttpContext.Response.Cookies.Add(cookie);
 
-            return RedirectToAction("Index", "Pacientes");
+            return RedirectToAction("Index", "Login");
 
 
             //var kineContext = new kineContext();
@@ -87,7 +87,7 @@ namespace relacionandoTablas.Controllers
             //    //kineContext.SaveChanges();
             //    return RedirectToAction("Index", "Pacientes");
 
-            //}
+            //} 
 
 
 

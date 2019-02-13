@@ -13,6 +13,7 @@ namespace relacionandoTablas.Filter4Niggas
         {
             var url = filterContext.HttpContext.Request.Url;
             bool logueado = false;
+            var c = filterContext.HttpContext.Request.RequestContext.RouteData.Values["controller"];
 
             if (filterContext.HttpContext.Request.Cookies["adid"] != null)
             {
@@ -21,18 +22,21 @@ namespace relacionandoTablas.Filter4Niggas
                     return;
                 else
                 {
-                    filterContext.Result = new RedirectToRouteResult(
+                    if (c.ToString().ToLower() != "login")
+                    {
+                        filterContext.Result = new RedirectToRouteResult(
                         new RouteValueDictionary
                         {
                            { "controller", "Login" },
                            { "action", "Index" }
-                        });
-                    return;
+                           });
+                        return;
+                    }
                 }
             }
             else
             {
-                var c = filterContext.HttpContext.Request.RequestContext.RouteData.Values["controller"];
+                
                 if (c.ToString().ToLower() != "login")
                 {
                     filterContext.Result = new RedirectToRouteResult(
