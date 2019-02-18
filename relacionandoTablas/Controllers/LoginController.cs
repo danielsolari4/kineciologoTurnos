@@ -57,6 +57,7 @@ namespace relacionandoTablas.Controllers
         {
             HttpCookie cookie = new HttpCookie("adid");
             cookie.Values["logueado"] = "false";
+
             cookie.Expires = DateTime.Now.AddDays(-1);
 
             HttpContext.Response.Cookies.Add(cookie);

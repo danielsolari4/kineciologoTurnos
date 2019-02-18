@@ -24,13 +24,8 @@ namespace relacionandoTablas.Filter4Niggas
                 {
                     if (c.ToString().ToLower() != "login")
                     {
-                        filterContext.Result = new RedirectToRouteResult(
-                        new RouteValueDictionary
-                        {
-                           { "controller", "Login" },
-                           { "action", "Index" }
-                           });
-                        return;
+                    
+                        GoToLogin(filterContext);
                     }
                 }
             }
@@ -39,13 +34,7 @@ namespace relacionandoTablas.Filter4Niggas
                 
                 if (c.ToString().ToLower() != "login")
                 {
-                    filterContext.Result = new RedirectToRouteResult(
-                    new RouteValueDictionary
-                    {
-                           { "controller", "Login" },
-                           { "action", "Index" }
-                       });
-                    return;
+                    GoToLogin(filterContext);
                 }
             }
 
@@ -55,9 +44,10 @@ namespace relacionandoTablas.Filter4Niggas
 
 
 
-        private void GoToLogin()
+        private void GoToLogin(ActionExecutingContext filterContext)
         {
-
+            filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controller", "Login" }, { "action", "Index" } });
+            return;
         }
     }
 }
