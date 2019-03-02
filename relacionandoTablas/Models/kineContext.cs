@@ -17,6 +17,8 @@ namespace relacionandoTablas.Models
         {
             modelBuilder.Entity<Turno>().HasRequired(x => x.Paciente).WithMany(s => s.Turnos).HasForeignKey(t => t.PacienteID);
 
+            modelBuilder.Entity<Paciente>().Property(q => q.Edad).HasColumnType("datetime2");
+
             base.OnModelCreating(modelBuilder);
         }
 

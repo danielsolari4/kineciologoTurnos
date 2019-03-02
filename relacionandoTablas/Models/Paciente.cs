@@ -15,7 +15,7 @@ namespace relacionandoTablas.Models
         public string Apellido { get; set; }
         [Required]
         [Display(Name ="Fecha de Nacimiento")]
-        public int Edad { get; set; }
+        public DateTime Edad { get; set; }
         [Required]
         public int Telefono { get; set; }
         [Required]
