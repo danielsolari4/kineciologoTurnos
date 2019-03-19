@@ -13,7 +13,6 @@ namespace relacionandoTablas.Models
         public string Dia { get; set; }
         [Required]
         public string Hora { get; set; }
-        [Required]
         public virtual Paciente Paciente { get; set; }
         public int PacienteID { get; set; }
     }

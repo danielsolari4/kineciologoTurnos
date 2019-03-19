@@ -73,6 +73,7 @@ textarea {
     height: auto;
     width: 150px;
     position: relative;
+    
     }
 
 .navbar-brand img{
@@ -80,8 +81,11 @@ textarea {
     height: auto;
 }
 
+
+
 .papi .container{
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
