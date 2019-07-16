@@ -139,17 +139,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812261441479_primermigracion.cs" />
-    <Compile Include="Migrations\201812261441479_primermigracion.Designer.cs">
-      <DependentUpon>201812261441479_primermigracion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902071920566_dani.cs" />
-    <Compile Include="Migrations\201902071920566_dani.Designer.cs">
-      <DependentUpon>201902071920566_dani.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902111329506_sesentaiuno.cs" />
-    <Compile Include="Migrations\201902111329506_sesentaiuno.Designer.cs">
-      <DependentUpon>201902111329506_sesentaiuno.cs</DependentUpon>
+    <Compile Include="Migrations\201903141849574_keloke.cs" />
+    <Compile Include="Migrations\201903141849574_keloke.Designer.cs">
+      <DependentUpon>201903141849574_keloke.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\kineContext.cs" />
@@ -175,6 +167,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\fullcalendar.helper.js" />
     <Content Include="Scripts\fullcalendar.helper.min.js" />
@@ -330,14 +323,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812261441479_primermigracion.resx">
-      <DependentUpon>201812261441479_primermigracion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902071920566_dani.resx">
-      <DependentUpon>201902071920566_dani.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902111329506_sesentaiuno.resx">
-      <DependentUpon>201902111329506_sesentaiuno.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903141849574_keloke.resx">
+      <DependentUpon>201903141849574_keloke.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

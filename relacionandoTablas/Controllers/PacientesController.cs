@@ -80,7 +80,8 @@ namespace relacionandoTablas.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre")] Paciente paciente)
+        //public ActionResult Edit([Bind(Include = "Id,Nombre")] Paciente paciente)
+        public ActionResult Edit(Paciente paciente)
         {
             if (ModelState.IsValid)
             {

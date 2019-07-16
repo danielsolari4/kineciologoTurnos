@@ -7,13 +7,13 @@ namespace relacionandoTablas.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class dani : IMigrationMetadata
+    public sealed partial class keloke : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(dani));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(keloke));
         
         string IMigrationMetadata.Id
         {
-            get { return "201902071920566_dani"; }
+            get { return "201903141849574_keloke"; }
         }
         
         string IMigrationMetadata.Source
