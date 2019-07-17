@@ -45,7 +45,7 @@ namespace relacionandoTablas.Controllers
                 //Session["userID"] = userDetails.UserID;
                 //usuario.Logueado = 1;
                 //kineContext.SaveChanges();
-                return RedirectToAction("Index", "Pacientes");
+                return RedirectToAction("Index", "Home");
                 
             }
 
