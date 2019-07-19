@@ -6,97 +6,127 @@
     ViewBag.Title = "Index";
 }
 
-<div class="centrado">
 
-    <div class="login-image">
-        <a href="/Home">
-            <img src="@Url.Content("~/Content/images/ancarola-web.png")" alt="Alternate Text" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
 
-        </a>
+    <style>
+
+        .centrado {
+            margin: 200px auto;
+        }
+
+        .ingresar {
+            background-color: #5ea3a3;
+            color: #fff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #add2c9;
+        }
+
+        .login {
+            border: 2px solid green;
+            color: #488b8f;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            max-width: 500px;
+            width: 100%;
+            margin: auto auto;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+            .login input {
+                margin: 10px auto;
+                height: 4%;
+                width: 100%;
+                border-radius: 5px;
+                padding: 0px 10px;
+                box-shadow: none;
+            }
+
+        label {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+
+        .login-image {
+            width: 26%;
+            margin: auto auto;
+        }
+
+            .login-image a img {
+                width: 100%;
+                height: 20%;
+            }
+
+        .login input:hover {
+            opacity: 0.5;
+        }
+
+
+        @@media (max-width: 360px) {
+
+            
+            /*Aca va lo que quiero que se vea mobile*/
+
+
+
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div class="centrado">
+
+        <div class="login-image">
+            <a href="/Home">
+                <img src="@Url.Content("~/Content/images/ancarola-web.png")" alt="Alternate Text" />
+
+            </a>
+        </div>
+
+
+
+
+
+        <form action="/Login/Index" method="post">
+            <div class="login">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <label>Usuario</label>
+                @Html.EditorFor(model => model.Userr, new { htmlAttributes = new { @class = "input-text", @type = "text", @required = "true" } })
+                @Html.ValidationMessageFor(model => model.Userr, "", new { @class = "text-danger" })
+                <label>Constraseña</label>
+                @Html.EditorFor(model => model.Pass, new { htmlAttributes = new { @class = "input-text", @type = "password", @required = "true" } })
+                @Html.ValidationMessageFor(model => model.Pass, "", new { @class = "text-danger" })
+                <input type="submit" name="name" value="Ingresar" class="ingresar" />
+            </div>
+        </form>
     </div>
 
-
-
-
-
-    <form action="/Login/Index" method="post">
-        <div class="login">
-
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-            <label>Usuario</label>
-            @Html.EditorFor(model => model.Userr, new { htmlAttributes = new { @class = "input-text", @type = "text", @required = "true" } })
-            @Html.ValidationMessageFor(model => model.Userr, "", new { @class = "text-danger" })
-            <label>Constraseña</label>
-            @Html.EditorFor(model => model.Pass, new { htmlAttributes = new { @class = "input-text", @type = "password", @required = "true" } })
-            @Html.ValidationMessageFor(model => model.Pass, "", new { @class = "text-danger" })
-            <input type="submit" name="name" value="Ingresar" class="ingresar" />
-        </div>
-    </form>
-</div>
-<style>
-
-    .centrado{
-        margin: 200px auto;
-    }
-
-    .ingresar {
-        background-color: #5ea3a3;
-        color: #fff;
-    }
-
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #add2c9;
-    }
-
-    .login {
-        border: 2px solid green;
-        color: #488b8f;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 20%;
-        margin: auto auto;
-        border-radius: 5px;
-        padding: 15px;
-        margin-top: 15px;
-    }
-
-    .login input{
-        margin: 10px auto;
-        height: 4%;
-        width: 100%;
-        border-radius: 5px;
-        padding: 0px 10px;
-        box-shadow: none;
-
-    }
-    label {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding-top: 10px;
-        padding-left: 10px;
-        
-    }
-
-
-    .login-image {
-        width: 26%;
-        
-        margin: auto auto;
-    }
-
-    .login-image a img{        
-        width: 100%;
-        height: 20%;        
-    }
-
-    .login input:hover{
-        opacity: 0.5;
-    }
     
-</style>
+    </body>
+
+</html>
+    
