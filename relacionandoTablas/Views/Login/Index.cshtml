@@ -30,9 +30,14 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #add2c9;
+            background-image: url("https://image.freepik.com/foto-gratis/primer-plano-manos-escribiendo-teclado-portatil-masculina_1262-2250.jpg"); 
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-
+        
+        
+        
         .login {
             border: 2px solid green;
             color: #488b8f;
@@ -54,7 +59,6 @@
                 height: 4%;
                 width: 100%;
                 border-radius: 5px;
-                padding: 0px 10px;
                 box-shadow: none;
             }
 
@@ -115,6 +119,7 @@
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
                 <label>Usuario</label>
+
                 @Html.EditorFor(model => model.Userr, new { htmlAttributes = new { @class = "input-text", @type = "text", @required = "true" } })
                 @Html.ValidationMessageFor(model => model.Userr, "", new { @class = "text-danger" })
                 <label>Constraseña</label>

@@ -10,6 +10,9 @@
 <h1>RehabilitaR</h1>
 
 
+
+<div class="fondo-calendario" id='calendar'></div>
+
 <div>
     <div class="container-33">
         <div>
@@ -24,9 +27,6 @@
         </div>
     </div>
 </div>
-
-<div class="fondo-calendario" id='calendar'></div>
-
 
 <script>
         
@@ -44,6 +44,7 @@
         
         $('#calendar').fullCalendar({
 
+            locale: 'es',
             header: {
                 left: 'prev,next today',
                 center: 'title',
@@ -52,7 +53,7 @@
 
             themeSystem: 'bootstrap3',
             height: 450,
-            defaultView: 'agendaWeek',
+            defaultView: 'agendaDay',
             forceEventDuration: true,
             defaultTimedEventDuration: "00:30:00",
             events: events            

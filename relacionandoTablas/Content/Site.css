@@ -5,9 +5,11 @@ a{
 }
 
 body {
-    
+    background-image: url("https://image.freepik.com/foto-gratis/primer-plano-manos-escribiendo-teclado-portatil-masculina_1262-2250.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 20px;
-    background-color: #e1e6e5;
     font-family: 'Open Sans', sans-serif;
 }
 
