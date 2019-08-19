@@ -6,9 +6,12 @@
 
 <h2>Turnos</h2>
 
-<p>
+<div class="btn btn-default">
     @Html.ActionLink("Nuevo turno", "Create")
-</p>
+</div>
+<div>
+    <hr />
+</div>
 <table class="table table-bordered table-striped">
     <tr>
         <th>
@@ -36,9 +39,9 @@
         </td>
 
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
         </td>
     </tr>
 }
