@@ -74,6 +74,9 @@ namespace relacionandoTablas.Controllers
                 return HttpNotFound();
             }
             ViewBag.PacienteID = new SelectList(db.Pacientes, "Id", "Nombre", turno.PacienteID);
+
+            ViewBag.DetallePaciente = db.Pacientes.FirstOrDefault(x => x.Id == turno.PacienteID);
+
             return View(turno);
         }
 

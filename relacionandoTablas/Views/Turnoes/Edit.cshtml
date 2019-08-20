@@ -2,6 +2,8 @@
 
 @{
     ViewBag.Title = "Editar";
+
+    var modelPaciente = ViewBag.DetallePaciente;
 }
 
 <h2>Editar</h2>
@@ -9,8 +11,8 @@
 
 @using (Html.BeginForm())
 {
-   // @Html.AntiForgeryToken()
-    
+    // @Html.AntiForgeryToken()
+
     <div class="form-horizontal">
         <h4>Turno</h4>
         <hr />
@@ -20,7 +22,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Dia, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Dia, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Dia, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
                 @Html.ValidationMessageFor(model => model.Dia, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -39,6 +41,79 @@
             </div>
         </div>
     </div>
+
+ 
+
+    //Prueba detalles
+
+    <div>
+        <h3>Paciente</h3>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                <span>Nombre</span> 
+            </dt>
+            <dd>
+                <span>@modelPaciente.Nombre</span>
+            </dd>
+
+            <dt>
+                <span>Apellido</span>
+            </dt>
+            <dd>
+                <span>@modelPaciente.Apellido</span>
+            </dd>
+
+            <dt>
+                <span>Edad</span>
+            </dt>
+            <dd>
+                <span>@modelPaciente.Edad</span>
+            </dd>
+
+            <dt>
+                <span>Telefono</span>
+            </dt>
+            <dd>
+                <span>@modelPaciente.Telefono</span>
+            </dd>
+
+
+            <dt>
+                <span>Dirección</span>
+            </dt>
+            <dd>
+                <span>@modelPaciente.Dirección</span>
+            </dd>
+
+
+            <dt>
+                <span>ObraSocial</span>
+            </dt>
+            <dd>
+                <span>@modelPaciente.ObraSocial</span>
+            </dd>
+
+            <dt>
+                <span>HistoriaMedica</span>
+            </dt>
+            <dd>
+                <span>@modelPaciente.HistoriaMedica</span>
+            </dd>
+
+            <dt>
+                <span>Correo</span>
+            </dt>
+            <dd>
+                <span>@modelPaciente.Correo</span>
+            </dd>
+
+
+
+        </dl>
+    </div>
+
+
 }
 
 <div class="btn btn-default">

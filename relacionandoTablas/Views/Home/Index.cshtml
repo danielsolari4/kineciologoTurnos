@@ -33,7 +33,7 @@
         
     var jsonModel = '@Html.Raw(JsonConvert.SerializeObject(Model.Select(
                     x => new {
-                        id = x.Id,
+                        id = x.Id,                        
                         title = x.Paciente.Nombre+" "+ x.Paciente.Apellido,
                         start = x.Dia +" "+ x.Hora,
                         //end = x.Dia + " " + x.Hora,
@@ -64,6 +64,10 @@
             //eventMouseOut: function (event, jsEvent, view) {
             //    $('.fc-event-inner').remove();
             //},
+
+            eventClick: function (info, element, view) {
+                window.location.href = window.location.origin + '/Turnoes/Edit/' + info.id;                
+            },
             selectable: true,
             eventRender: function (event, element) {
                 $(element).tooltip({ title: event.title +' '+ event.start._i }); 
